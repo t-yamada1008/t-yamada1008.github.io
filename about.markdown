@@ -4,15 +4,22 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+こんにちは。
+t.yamadaの技術ブログ(Tech Blog)へようこそ。
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+このブログでは、私が日々学んでいる技術書の感想や、小さなTips（TIL: Today I Learned）などを共有します。
+プログラミングやITに関する知識を深めるために、日々の学びを記録し、他の人々とも共有することを目的としています。
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## 自己紹介
+私はシステムインテグレーション（SI）やカメラワーク、ビデオ制作の分野で5年間の経験があります。
+情報技術の修士号を持っており、現在はプログラマーとして働いています。
 
+## このブログで取り扱う内容
+- 技術書のレビューと感想
+- 日々の学び（TIL）
+- プログラミングのTipsやトリック
+- 新しい技術の試行とその結果
+- その他、IT業界に関連する情報
 
-[jekyll-organization]: https://github.com/jekyll
+## 連絡先
+何か質問やフィードバックがあれば、Twitter(X)もしくはメールアドレスにまでご連絡ください。
