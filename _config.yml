@@ -11,7 +11,7 @@ title:            TYTB
 tagline:          'T.Yamada Tech Blog'
 description:      'This is Tech Blog by T.Yamada  <a href="https://x.com/ty__tw" target="_blank">@ty__tw</a>.'
 url:              https://t-yamada1008.github.io/
-baseurl:          ""
+baseurl:          /
 
 author:
   name:           'T.Yamada'
