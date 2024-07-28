@@ -1,21 +1,13 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
-# relative_permalinks: true
-
-# Setup
-title:            TYTB
-tagline:          'T.Yamada Tech Blog'
-description:      'This is Tech Blog by T.Yamada  <a href="https://x.com/ty__tw" target="_blank">@ty__tw</a>.'
-url:              https://t-yamada1008.github.io/
-baseurl:          ''
+# _config.yml
+title:            "TYTB"
+tagline:          "T.Yamada Tech Blog"
+description:      "This is Tech Blog by T.Yamada."
+url:              "https://t-yamada1008.github.io"
+baseurl:          ""  # ユーザーサイトの場合は空にする
 
 author:
-  name:           'T.Yamada'
-  url:            https://x.com/ty__tw
+  name:           "T.Yamada"
+  url:            "https://x.com/ty__tw"
 
 plugins:
   - jekyll-sitemap
@@ -23,11 +15,11 @@ plugins:
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-paginate
-
+ 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          "2.1.0"
 
 github:
-  repo:           https://github.com/t-yamada1008
+  repo:           "https://github.com/t-yamada1008/t-yamada1008.github.io"
