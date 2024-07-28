@@ -38,3 +38,5 @@ gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 
 gem "kramdown"
+
+gem "faraday-retry"
