@@ -1,28 +1,21 @@
 # Dependencies
-markdown:         kramdown
+markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-# relative_permalinks: true
+relative_permalinks: true
 
 # Setup
-title:            TYTB
-tagline:          'T.Yamada Tech Blog'
-description:      'This is Tech Blog by T.Yamada  <a href="https://x.com/ty__tw" target="_blank">@ty__tw</a>.'
-url:              https://t-yamada1008.github.io/
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
 baseurl:          /
 
 author:
-  name:           'T.Yamada'
-  url:            https://x.com/ty__tw
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-seo-tag
-  - jekyll-paginate
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
 
 paginate:         5
 
@@ -30,4 +23,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/t-yamada1008
+  repo:           https://github.com/poole/hyde

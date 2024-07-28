@@ -4,29 +4,27 @@ title: About
 ---
 
 <p class="message">
-  TYTBにようこそ。
-  <br>
-  このページは、TYTBことT.Yamada Tech Blogについての紹介になります。
+  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
 
-このブログでは、ソフトウェア開発やプログラミングに関する最新の技術情報、学んだこと、プロジェクトの進捗などをシェアしています。日々の学習や実践を通じて得た知識を共有することで、同じように技術を学ぶ仲間たちに役立つ情報を提供することを目指しています。
+In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
 
-このサイトはほぼ全面的にChatGPTを使っています。また、このサイトは以下の技術で構成されています：
-- GitHub Pages: このブログのホスティングを無料で提供しています。
-- Jekyll: 静的サイトジェネレーターとして、このブログのフロントエンドを構築しています。
-- Hyde: Jekyllのテーマとして使用し、ブログのデザインとレイアウトを整えています。
+There are currently two themes built on Poole:
 
+* [Hyde](http://hyde.getpoole.com)
+* [Lanyon](http://lanyon.getpoole.com)
 
-## このブログについて
-- 言語とフレームワーク: 主にRuby、Ruby on Railsなどのプログラミング言語、フレームワークについて書いています。
-- プロジェクト: 実際に手がけているプロジェクトやその進行状況を紹介します。
-- 学習と成長: 技術書のレビューや勉強会での学び、キャリア形成についても触れています。
+Learn more and contribute on [GitHub](https://github.com/poole).
 
-## 作者について
-ソフトウェアエンジニアとして働いており、日々のコーディングや新しい技術の学習を続けています。また、趣味はアートや文化鑑賞です。
+## Setup
 
-- 経歴: システムインテグレーションとカメラワーク/映像制作のバックグラウンドを持ち、現在はプログラミングに注力しています。
-- 目標: 将来的にはソフトウェア開発の名工として成長し、技術とビジネスの両面で貢献できる存在になることを目指しています。
+Some fun facts about the setup of this project include:
 
-## お問い合わせ
-質問や提案があれば、GitHubのissueを開くか、Twitterでお知らせください。
+* Built for [Jekyll](http://jekyllrb.com)
+* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
+* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
+* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+
+Thanks for reading!
