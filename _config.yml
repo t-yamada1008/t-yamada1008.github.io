@@ -9,8 +9,9 @@ author:
   name:           "T.Yamada"
   url:            "https://x.com/ty__tw"
 
+# Build settings
+theme: minima
 plugins:
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
   - jekyll-seo-tag
