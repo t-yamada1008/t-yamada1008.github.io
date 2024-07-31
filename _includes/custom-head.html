@@ -4,3 +4,19 @@
   1. Head over to https://realfavicongenerator.net/ to add your own favicons.
   2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
 {% endcomment %}
+
+<!-- Basic Open Graph meta tags -->
+<meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/image.jpg">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Basic Twitter card meta tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/image.jpg">
+<meta name="twitter:site" content="@ty__tw">
