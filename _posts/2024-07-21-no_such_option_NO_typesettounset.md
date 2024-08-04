@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "zshエラー解決: no such option: NO_typesettounset"
-date:   2024-07-21 22:20:00 +0900
 ---
 
 ## エラー内容
