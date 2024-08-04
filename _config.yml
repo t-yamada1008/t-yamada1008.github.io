@@ -70,4 +70,6 @@ minima:
   #  - { platform: x,              user_url: "https://x.com/jekyllrb" }
   #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
-
+# baseurl
+url:              "https://t-yamada1008.github.io"
+baseurl:          ""  # ユーザーサイトの場合は空にする
