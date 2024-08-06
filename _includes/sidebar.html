@@ -1,0 +1,28 @@
+<div class="sidebar">
+  <h2>Categories</h2>
+  <ul>
+    {% for category in site.categories %}
+      <li>
+        <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">{{ category[0] }}</a> ({{ category[1].size }})
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Tags</h2>
+  <ul>
+    {% for tag in site.tags %}
+      <li>
+        <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}/">{{ tag[0] }}</a> ({{ tag[1].size }})
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Archives</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

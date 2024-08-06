@@ -1,2 +1,32 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+/* サイドバーのスタイル例 */
+.sidebar {
+  width: 250px;
+  float: left; /* layout-reverseを使っている場合、leftにする */
+  padding: 1em;
+  background-color: #f4f4f4;
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 0.5em 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
