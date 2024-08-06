@@ -19,6 +19,7 @@ theme: minima
 #remote_theme: jekyll/minima
 
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
 
@@ -72,3 +73,13 @@ minima:
 # baseurl
 url:              "https://t-yamada1008.github.io"
 baseurl:          ""  # ユーザーサイトの場合は空にする
+
+# collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title:output_ext
+  categories:
+    output: true
+  tags:
+    output: true
