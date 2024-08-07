@@ -2,7 +2,6 @@
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
 /* custom-styles.scss */
-/* custom-styles.scss */
 
 /* Wrapper for the content and sidebar */
 .custom-wrapper {
@@ -36,7 +35,7 @@
   padding: 1em 0;
 }
 
-.header-content {
+.wrapper {
   max-width: 1200px; /* 最大幅をコンテンツと揃える */
   margin: 0 auto;
   padding: 0 1em;
@@ -52,6 +51,10 @@
   font-size: 1.5em; /* タイトルのサイズを調整 */
 }
 
+.site-nav {
+  margin-left: auto; /* ナビゲーションを右寄せにする */
+}
+
 .site-nav .page-link {
   margin-left: 1em;
   font-size: 1.25em; /* リンクのサイズを調整 */
@@ -62,14 +65,12 @@
   border-top: 1px solid #999; /* $border-color-01 の代わりに具体的な色を使用 */
   padding: 1em 0; /* $spacing-unit の代わりに具体的な値を使用 */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333; /* $background-color の代わりに具体的な色を使用 */
+  justify-content: center; /* フッター全体を中央寄せ */
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* フッター内の要素を縦並びにする */
   align-items: center;
   width: 100%;
   max-width: 1200px; /* 最大幅をコンテンツと揃える */
@@ -79,8 +80,19 @@
 
 .footer-description {
   margin: 0;
+  text-align: center; /* テキストを中央寄せ */
+}
+
+.footer-social {
+  margin-top: 1em; /* 上に余白を追加 */
+  display: flex;
+  justify-content: center; /* ソーシャルアイコンを中央寄せ */
 }
 
 .footer-blog {
   margin: 0;
+}
+
+.footer-social .social-icon {
+  margin: 0 0.5em; /* アイコン間の余白を設定 */
 }
