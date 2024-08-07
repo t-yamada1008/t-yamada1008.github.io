@@ -3,40 +3,16 @@
 
 /* custom-styles.scss */
 
-/* Wrapper for the content and sidebar */
-.custom-wrapper {
-  display: flex;
-  flex-direction: row; /* サイドバーを右に配置 */
-  max-width: 1200px; /* 最大幅を設定 */
-  margin: 0 auto;
-  padding: 1em; /* ページ全体に余白を追加 */
-}
-
-/* Sidebar styles */
-.custom-sidebar {
-  width: 250px;
-  padding: 1em;
-  margin-left: 1em; /* 左側にマージンを追加してスペースを作る */
-  flex-shrink: 0; /* サイドバーの幅を固定 */
-}
-
-/* Content styles */
-.custom-content {
-  flex: 1;
-  padding: 1em;
-  min-width: 0; /* サイドバーに押しつぶされないようにする */
-}
-
 /* Header styles */
 .site-header {
-  border-top: 5px solid #ccc; /* $border-color-03 の代わりに具体的な色を使用 */
-  border-bottom: 1px solid #999; /* $border-color-01 の代わりに具体的な色を使用 */
-  background-color: #333; /* $background-color の代わりに具体的な色を使用 */
+  border-top: 5px solid #ccc;
+  border-bottom: 1px solid #999;
+  background-color: #333;
   padding: 1em 0;
 }
 
-.wrapper {
-  max-width: 1200px; /* 最大幅をコンテンツと揃える */
+.header-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
   display: flex;
@@ -48,51 +24,81 @@
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
-  font-size: 1.5em; /* タイトルのサイズを調整 */
+  font-size: 1.5em;
 }
 
 .site-nav {
-  margin-left: auto; /* ナビゲーションを右寄せにする */
+  display: flex;
+  align-items: center;
 }
 
 .site-nav .page-link {
   margin-left: 1em;
-  font-size: 1.25em; /* リンクのサイズを調整 */
+  font-size: 1.25em;
+}
+
+/* Wrapper for the content and sidebar */
+.custom-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/* Sidebar styles */
+.custom-sidebar {
+  width: 250px;
+  padding: 1em;
+  margin-left: 1em;
+  flex-shrink: 0;
+}
+
+/* Content styles */
+.custom-content {
+  flex: 1;
+  padding: 1em;
+  min-width: 0;
 }
 
 /* Footer styles */
 .site-footer {
-  border-top: 1px solid #999; /* $border-color-01 の代わりに具体的な色を使用 */
-  padding: 1em 0; /* $spacing-unit の代わりに具体的な値を使用 */
-  display: flex;
-  justify-content: center; /* フッター全体を中央寄せ */
+  border-top: 1px solid #999;
+  padding: 1em 0;
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column; /* フッター内の要素を縦並びにする */
-  align-items: center;
-  width: 100%;
-  max-width: 1200px; /* 最大幅をコンテンツと揃える */
+.footer-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
-}
-
-.footer-description {
-  margin: 0;
-  text-align: center; /* テキストを中央寄せ */
-}
-
-.footer-social {
-  margin-top: 1em; /* 上に余白を追加 */
   display: flex;
-  justify-content: center; /* ソーシャルアイコンを中央寄せ */
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-blog {
-  margin: 0;
+.footer-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.footer-social .social-icon {
-  margin: 0 0.5em; /* アイコン間の余白を設定 */
+.footer-col {
+  margin-bottom: 1em;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links .social-icon {
+  margin: 0.5em 0;
 }
