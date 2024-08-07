@@ -22,10 +22,10 @@
   <!-- 年月一覧 -->
   <h2>Archives</h2>
   <ul>
-    {% assign months = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+    {% assign months = site.posts | group_by_exp: "post", "post.date | date: '%Y/%m'" %}
     {% for month in months %}
       <li>
-        <a href="{{ site.baseurl }}/{{ month.name | date: '%Y/%m' }}/">{{ month.name | date: '%B %Y' }}</a> ({{ month.size }})
+        <a href="{{ site.baseurl }}/archives/{{ month.name | date: '%Y/%m' }}/">{{ month.name | date: '%B %Y' }}</a> ({{ month.size }})
       </li>
     {% endfor %}
   </ul>

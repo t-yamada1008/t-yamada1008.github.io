@@ -96,3 +96,8 @@ jekyll-archives:
     tag: /tags/:name/
     year: /archives/:year/
     month: /archives/:year/:month/
+  titles:
+    category: "Posts in category :name"
+    tag: "Posts tagged :name"
+    year: "Posts from :year"
+    month: "Posts from :month :year"
