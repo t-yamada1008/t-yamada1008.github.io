@@ -11,8 +11,8 @@ else
 end
 
 # ファイル名を作成
-# 例: 2020-01-01-Hello-World.md
-file_name = "#{today}-#{title.gsub(" ", "_")}.md"
+# ファイルのディレクトリを_postsに変更
+file_name = "_posts/#{today}-#{title.downcase.gsub(" ", "_")}.md"
 
 # ファイルを作成し、テンプレートを書き込む
 # ファイルがすでに存在する場合はエラーを表示
