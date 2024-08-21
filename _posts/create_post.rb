@@ -1,18 +1,19 @@
 # 今日の日付を取得
 today = Time.now.strftime("%Y-%m-%d")
 
-# 引数を取得し、ファイル名を作成
-# 引数がない場合はUsageを表示
-if ARGV.length != 1
-  puts "Usage: ruby create_post.rb [Post Title]"
+# タイトルを入力
+p "Please enter the title of the post"
+title = gets.chomp
+
+# タイトルを入力していない場合はエラーを表示
+if title.empty?
+  puts "Error: Title is empty"
   exit
-else
-  title = ARGV[0]
 end
 
 # ファイル名を作成
 # ファイルのディレクトリを_postsに変更
-file_name = "_posts/#{today}-#{title.downcase.gsub(" ", "_")}.md"
+file_name = "#{today}-#{title.downcase.gsub(" ", "_").gsub(".", "_")}.md"
 
 # ファイルを作成し、テンプレートを書き込む
 # ファイルがすでに存在する場合はエラーを表示
