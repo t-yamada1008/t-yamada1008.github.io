@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "zshエラー解決: no such option: NO_typesettounset"
+categories: [TIL]
+tags: [zsh]
 ---
 
 ## エラー内容
