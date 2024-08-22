@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1431. Kids With the Greatest Number of Candies
+title: Kids With the Greatest Number of Candies
 date: 2024-08-21
 categories: [TIL]
 tags: [ruby, LeetCode75]

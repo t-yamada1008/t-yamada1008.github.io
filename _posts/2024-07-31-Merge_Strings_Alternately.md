@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1768. Merge Strings Alternately
+title: Merge Strings Alternately
 categories: [LeetCode]
 tags: [Ruby, LeetCode75]
 ---

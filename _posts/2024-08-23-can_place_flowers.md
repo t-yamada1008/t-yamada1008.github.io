@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 605. Can Place Flowers
+title: Can Place Flowers
 date: 2024-08-23
 categories: [LeetCode]
 tags: [ruby]

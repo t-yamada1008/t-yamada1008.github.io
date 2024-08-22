@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1071. Greatest Common Divisor of Strings
+title: Greatest Common Divisor of Strings
 date: 2024-08-05
 categories: [LeetCode]
 tags: [Ruby, LeetCode75]
