@@ -12,8 +12,9 @@ if title.empty?
 end
 
 # ファイル名を作成
-# ファイルのディレクトリを_postsに変更
-file_name = "#{today}-#{title.downcase.gsub(" ", "_").gsub(".", "_")}.md"
+## _postsディレクトリにファイルを作成
+## _postsディレクトリには記事のみを格納するため
+file_name = "#{Dir.pwd}/_posts/#{today}-#{title.downcase.gsub(" ", "_").gsub(".", "_")}.md"
 
 # ファイルを作成し、テンプレートを書き込む
 # ファイルがすでに存在する場合はエラーを表示
