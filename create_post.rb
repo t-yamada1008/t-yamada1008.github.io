@@ -14,7 +14,7 @@ end
 # ファイル名を作成
 ## _postsディレクトリにファイルを作成
 ## _postsディレクトリには記事のみを格納するため
-file_name = "#{Dir.pwd}/_posts/#{today}-#{title.downcase.gsub(" ", "_").gsub(".", "_")}.md"
+file_name = "#{Dir.pwd}/_posts/#{today}-#{title.downcase.gsub(" ", "_").gsub(".", "")}.md"
 
 # ファイルを作成し、テンプレートを書き込む
 # ファイルがすでに存在する場合はエラーを表示
