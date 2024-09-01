@@ -33,3 +33,6 @@ else
   end
   puts "Created: #{file_name}"
 end
+
+# ファイルを開く
+system("code #{file_name}")
