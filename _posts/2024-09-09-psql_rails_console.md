@@ -6,37 +6,73 @@ categories: [TIL]
 tags: []
 ---
 
-psqlとrails consoleでのデータの乖離が発生する場合、以下のような理由が考えられます。
+rails consoleでsaveするのを忘れたのか、なぜかpostgresqlとrails console上での乖離がおきた。
 
-データベースの接続環境の違い:
+コレに対して、psqlで叩いて確認をしたので、その内容を聞いてみた。
 
-psqlが接続しているデータベースと、rails consoleが接続しているデータベースが異なる可能性があります。Railsのconfig/database.ymlファイルで設定されているデータベースがpsqlで確認しているものと同じか確認してください。
-トランザクションの違い:
+## ActiveRecordとpsqlの叩き直し
+RailsでActiveRecordのメソッドを使用してデータベースを操作する際に生成されるSQLと、それを直接`psql`で叩いて同じ操作を行う方法について、例を挙げて説明します。
 
-Railsコンソールは通常、デフォルトでトランザクションを使用して動作します。そのため、コンソールで実行した操作がデータベースにコミットされていない可能性があります。rails consoleで明示的にcommitするか、ActiveRecord::Base.connection.commit_db_transactionを使って変更を反映させる必要があります。
-キャッシュの影響:
+### 例: ユーザーを検索する場合
 
-Railsアプリケーションのキャッシュがデータの乖離の原因となる場合があります。例えば、モデルのデータがメモリにキャッシュされていて、rails consoleでのデータ表示が最新のデータベース状態を反映していない場合があります。reload!コマンドでモデルをリロードするか、Railsキャッシュをクリアしてみてください。
-データベースのレプリケーションの遅延:
+#### 1. Rails ConsoleでのActiveRecordの使用
 
-データベースがレプリケーション構成で動作している場合、psqlとrails consoleが異なるレプリカに接続していることで乖離が生じることがあります。この場合、レプリケーションの遅延が原因でデータが最新でない可能性があります。
-マイグレーションの未適用:
+まず、RailsコンソールでActiveRecordのクエリを使ってユーザーを検索する例です。
 
-マイグレーションが正しく適用されていない場合、psqlで確認するデータベースの構造とrails consoleでのモデルの期待する構造が異なる可能性があります。rails db:migrate:statusを使ってマイグレーションの状況を確認し、必要に応じてrails db:migrateを実行してください。
-これらの点を確認して、psqlとrails consoleでのデータの不整合の原因を特定してみてください。必要に応じて、具体的なエラーメッセージや詳細情報を教えていただければ、さらに具体的な解決策を提供できます。
+```ruby
+# Rails consoleでの例
+user = User.find_by(email: 'alice@example.com')
+```
 
-## 真相
+このコードを実行すると、Railsは次のようなSQLクエリをデータベースに送信します。
 
-なるほど、saveを忘れていたのが原因だったのですね！Railsコンソールでオブジェクトを作成または更新したときに、saveメソッドを呼び出さないと、データベースには変更が反映されません。変更を保存するには、以下のようにsaveを使用する必要があります。
+```sql
+SELECT "users".* FROM "users" WHERE "users"."email" = 'alice@example.com' LIMIT 1;
+```
 
-ruby
-コードをコピーする
-user = User.new(name: 'Alice')
-user.save
-または、変更を即座に保存するために、createやupdateメソッドを使用することもできます：
+#### 2. psqlで同じクエリを実行
 
-ruby
-コードをコピーする
-user = User.create(name: 'Alice') # データベースにすぐに保存される
-user.update(email: 'alice@example.com') # 既存のレコードを更新し、保存する
-次回からは、saveの呼び出
+`psql`クライアントを使用して、上記のSQLクエリをデータベースに直接発行するには、次のようにします。
+
+```bash
+psql -U <username> -d <database_name>
+```
+
+上記のコマンドで`psql`に接続した後、SQLクエリを実行します：
+
+```sql
+SELECT * FROM users WHERE email = 'alice@example.com' LIMIT 1;
+```
+
+### 例: ユーザーの更新
+
+#### 1. Rails ConsoleでのActiveRecordの使用
+
+次に、RailsコンソールでActiveRecordを使ってユーザーの情報を更新する例です。
+
+```ruby
+# Rails consoleでの例
+user = User.find_by(email: 'alice@example.com')
+user.update(name: 'Alice Smith')
+```
+
+このコードを実行すると、Railsは次のようなSQLクエリをデータベースに送信します。
+
+```sql
+UPDATE "users" SET "name" = 'Alice Smith', "updated_at" = '2024-09-09 12:00:00' WHERE "users"."id" = 1;
+```
+
+#### 2. psqlで同じクエリを実行
+
+`psql`クライアントで同じ更新操作を行う場合は、以下のようにします：
+
+```sql
+UPDATE users SET name = 'Alice Smith', updated_at = '2024-09-09 12:00:00' WHERE email = 'alice@example.com';
+```
+
+### まとめ
+
+RailsコンソールでActiveRecordメソッドを呼び出すと、内部で生成されるSQLをログで確認し、それを基に`psql`で直接SQLを実行することが可能です。
+この方法で、SQLの学習やデバッグを行うことができます。
+
+Railsのログは通常、`log/development.log`に出力されるので、必要に応じてログを参照してSQLを確認できます。
