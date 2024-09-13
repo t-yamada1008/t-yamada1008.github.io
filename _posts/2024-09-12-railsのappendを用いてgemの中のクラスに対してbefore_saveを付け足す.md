@@ -1,6 +1,6 @@
 ---
 layout: post
-title: rails append
+title: railsのappendを用いてgemの中のクラスに対してbefore_saveを付け足す
 date: 2024-09-12
 categories: [TIL]
 tags: [rails, ruby, gpt]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: brew path
+title: homebrewを成功したときにはecho~からなる文字列が出現する
 date: 2024-09-03
 categories: [TIL]
 tags: [shell, zsh]
